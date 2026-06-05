@@ -12,7 +12,7 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Travel Planner API",
-    description="A CRUD backend API for managing travel projects and collecting desired places (artworks) to visit using the Art Institute of Chicago API.",
+    description="A backend API for managing travel projects and collecting desired places(artworks) to visit using the Art Institute of Chicago API",
     version="1.0.0",
 )
 
