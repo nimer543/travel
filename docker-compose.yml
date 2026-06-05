@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./data/travel_planner.db
+      - BASIC_AUTH_USERNAME=admin
+      - BASIC_AUTH_PASSWORD=travel123
+      - CACHE_TTL_SECONDS=300
+    volumes:
+      - ./data:/app/data
+    restart: always
